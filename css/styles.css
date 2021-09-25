@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: rgb(199, 183, 162);
+}
+
+header {
+  background-color: rgb(77, 164, 214);
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  z-index: 1;
+  padding-bottom: 1px;
+  padding: 5px 10px;
+  text-align: left;
+  /*position: relative; /* this is what fixed the main to start after the header*/
+}
+
+.rectangle-logo {
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  /*background-color: rgb(122, 114, 233);*/
+  position: fixed; /*this was the solution put that in absolute*/
+  z-index: 1; /*this was the solution put the logo over the nav*/
+  margin-right: 10%;
+}
+.rectangle-nav {
+  display: inline-block;
+  width: 320px;
+  height: 40px;
+  /*background-color: rgb(9, 30, 224);*/
+  padding-top: 50px;
+  text-align-last: right; /*this what is pussing the links to the far right in the div container*/
+  right: 5%; /*this what is pussing the nav to the far right*/
+  position: absolute; /*this was the solution put that in absolute*/
+}
+
+.logo {
+  height: 100px;
+}
+
+nav {
+  *background-color: rgb(
+    161,
+    227,
+    243
+  ); /* lesson learnt dont put here the display: inline-block;
+  becasuse it will affect the right padding of .rectangle-nav */
+}
+
+ul {
+  margin: 10px auto;
+  padding: 0 10px;
+  text-align: center;
+  /*background-color: rgb(226, 241, 6);*/
+}
+
+li {
+  list-style: none;
+  width: 100px;
+  /*background-color: orange;*/
+  font-size: 20px;
+  display: inline-block;
+}
+.ul-hobbies {
+  list-style-type: circle;
+  padding-top: 5px;
+  text-align: left; /*this what is pussing the links to the far right in the div container*/
+  position: static; /*this was the solution put that in absolute*/
+  margin-left: 35%; /*this what is pussing the nav to the far right*/
+  position: relative;
+  display: inline-block;
+}
+
+.hobbies-list {
+  list-style-type: circle;
+  padding-top: 5px;
+  text-align: left; /*this what is pussing the links to the far right in the div container*/
+  position: relative; /*this was the solution put that in absolute*/
+  display: block;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  /*background-color: rgb(218, 233, 16);*/
+  text-align: center;
+  position: relative; /* this is was making the <main> not to touch the <header> it was with the CSS value relative
+  But I didnt what to use margin-top to bring the main down so I put it back to relative and gave 1px padding
+  so now they are touching, but why 1 px value fixed it ?????? Another way to fix this was to give a neg margin of -20 on the top but I don't want 
+  to use negative values*/
+  top: 0px;
+  height: 80%;
+  padding-top: 170px;
+  padding-bottom: 50px;
+  /* margin-top: 200px; I tried to use this but it brought the header down 200px ????? why this in the main is affecting the header*/
+  background-image: url("../images/santa_teresa.jpg");
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-repeat: no-repeat;
+}
+
+.article {
+  width: 90%;
+  display: inline-block;
+}
+
+h1 {
+  color: white;
+  font-family: "Helvetica black", sans-serif;
+  font-size: 2.5em;
+  font-weight: 350;
+  margin-top: 15px;
+  /*background-color: rgb(247, 198, 107);*/
+  display: inline-block;
+}
+
+.h1-left {
+  text-align: left;
+  margin-left: 2%;
+  font-size: 4em;
+  display: inline-block;
+}
+
+h2 {
+  color: rgb(3, 240, 208);
+  font-family: "Helvetica", sans-serif;
+  font-size: 3.5em;
+  font-weight: 300;
+  text-align: left;
+  margin: 20px 10px 0px 60px;
+  margin-left: 25%; /*this what is pussing the nav to the right*/
+  display: inline-block;
+  border: white solid 2px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.fig-photo {
+  text-align: left;
+  height: 300px;
+  width: 300px;
+  background-color: aqua;
+  margin: 90px 10px 0px 40px;
+  display: inline-block;
+}
+
+p {
+  color: rgb(0, 0, 0);
+  text-align: left;
+  margin: 40px 10px 0px 30%;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.p-color {
+  color: white;
+  margin: 20px 10px 10px 2%;
+  max-width: 80%;
+  min-width: 20%;
+  display: inline-block;
+}
+footer {
+  /*background-color: rgb(255, 146, 5);*/
+  padding: 10px;
+  text-align: center;
+  font-size: 0.7em;
+  position: static;
+  display: block;
+}
+
+/* MEDIA QUERIES */
+/*  Smartphones (portrait)*/
+
+@media (min-width: 320px) {
+  body {
+    /*background-color: blue*/
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+/*  Tablets (portrait)*/
+@media (min-width: 768px) {
+  body {
+    /*background-color: blue*/
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+}
+
+/*  Desktop*/
+@media (min-width: 1024px) {
+  body {
+    /*background-color: blue*/
+  }
+  p {
+    font-size: 1rem;
+    line-height: normal;
+  }
+}
