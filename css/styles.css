@@ -183,7 +183,7 @@ footer {
   display: block;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES Mobile First */
 /*  Smartphones (portrait)*/
 
 @media (min-width: 320px) {
